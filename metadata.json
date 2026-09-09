@@ -1,0 +1,6 @@
+{
+  "name": "FLT Infotech - Assistência Técnica de Informática em Santos",
+  "description": "Assistência técnica de informática especializada em computadores, notebooks, PCs Gamer, celulares e locação de impressoras em Santos e Baixada Santista. Desde 2005.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
