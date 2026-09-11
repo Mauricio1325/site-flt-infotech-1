@@ -1,6 +1,5 @@
 import React from 'react';
 import { COMPANY_INFO } from '../data/companyData';
-import storeImage from '../assets/images/tech_store_front_1788963613468.jpg';
 
 export const AboutSection: React.FC = () => {
   const handleContactClick = () => {
@@ -30,11 +29,11 @@ export const AboutSection: React.FC = () => {
           
           {/* Left Column: Photo */}
           <div className="lg:col-span-6">
-            <div className="rounded-2xl overflow-hidden shadow-md border border-slate-200">
+            <div className="rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-slate-50">
               <img
-                src={storeImage}
-                alt="Loja e Laboratório da FLT Infotech em Santos"
-                className="w-full h-80 sm:h-96 object-cover"
+                src="/conserta-computadores-notebook-impressoras-celular.png"
+                alt="FLT Infotech - Conserto de Computadores, Notebook, Impressoras e Celular em Santos"
+                className="w-full h-auto max-h-[460px] object-cover"
                 loading="lazy"
               />
             </div>

@@ -8,6 +8,7 @@ import {
   Facebook
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
+import { BrandLogoText } from './BrandLogoText';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,25 +41,27 @@ export const Header: React.FC = () => {
       {/* Top Contact & Social Bar (exact look from reference model) */}
       <div className="bg-black/95 border-b border-white/10 text-xs py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          {/* Social Icons Left */}
-          <div className="flex items-center space-x-3 text-slate-300">
+          {/* Social Icons Left with original brand colors and enlarged sizing */}
+          <div className="flex items-center space-x-2 sm:space-x-2.5">
             <a 
               href={COMPANY_INFO.social.instagram} 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Instagram da FLT Infotech"
-              className="hover:text-white transition-colors"
+              title="Siga a FLT Infotech no Instagram"
+              className="w-6 h-6 sm:w-7 sm:h-7 rounded-md sm:rounded-lg bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white shadow-sm hover:scale-110 hover:shadow-[0_0_12px_rgba(220,39,67,0.5)] transition-all duration-200"
             >
-              <Instagram className="w-4 h-4" />
+              <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.2]" />
             </a>
             <a 
               href={COMPANY_INFO.social.facebook} 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="Facebook da FLT Infotech"
-              className="hover:text-white transition-colors"
+              title="Curta a FLT Infotech no Facebook"
+              className="w-6 h-6 sm:w-7 sm:h-7 rounded-md sm:rounded-lg bg-[#1877F2] flex items-center justify-center text-white shadow-sm hover:scale-110 hover:shadow-[0_0_12px_rgba(24,119,242,0.5)] transition-all duration-200"
             >
-              <Facebook className="w-4 h-4" />
+              <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-white stroke-none" />
             </a>
           </div>
 
@@ -95,20 +98,13 @@ export const Header: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a href="#inicio" className="flex items-center gap-3 sm:gap-4 shrink-0 group" id="header-logo-link">
+            <a href="#inicio" className="flex items-center gap-3 sm:gap-3.5 shrink-0 group" id="header-logo-link">
               <img
                 src="/logo-com-fundo.png"
                 alt="FLT Infotech - Assistência Técnica em Santos"
-                className="h-12 sm:h-14 md:h-16 w-auto object-contain rounded-lg shadow-sm group-hover:scale-105 transition-transform"
+                className="h-11 sm:h-13 md:h-14 w-auto object-contain rounded-lg shadow-sm group-hover:scale-105 transition-transform"
               />
-              <div className="flex flex-col justify-center leading-tight">
-                <span className="text-base sm:text-lg md:text-xl font-black text-[#00ff01] tracking-tight leading-none drop-shadow-[0_1px_6px_rgba(0,255,1,0.25)]">
-                  FLT INFOTECH
-                </span>
-                <span className="text-xs sm:text-sm text-slate-100 font-semibold tracking-normal mt-1 leading-tight">
-                  Assistência Técnica em Santos
-                </span>
-              </div>
+              <BrandLogoText className="w-[145px] sm:w-[170px] md:w-[195px] h-auto" glow={false} />
             </a>
 
             {/* Desktop Navigation Links */}

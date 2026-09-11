@@ -279,6 +279,22 @@ export const REVIEWS_DATA: ReviewItem[] = [
     avatarLetter: 'F',
     comment: 'Arrumei meu celular com eles e gostei muito do serviço. Bom atendimento e preço justo!',
     verified: true
+  },
+  {
+    name: 'Carlos Eduardo Teixeira',
+    role: 'Cliente Google',
+    stars: 5,
+    avatarLetter: 'C',
+    comment: 'Consertou duas impressoras minhas uma de jato de tinta e outra de toner, serviço excelente, muito bom recomendo.',
+    verified: true
+  },
+  {
+    name: 'Gabriel Bamondes Teixeira',
+    role: 'Cliente Google',
+    stars: 5,
+    avatarLetter: 'G',
+    comment: 'Ótimo atendimento me atenderam perfeitamente e entregam rápido, barato e bom, recomendo.',
+    verified: true
   }
 ];
 

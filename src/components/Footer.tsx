@@ -8,6 +8,7 @@ import {
   Clock
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
+import { BrandLogoText } from './BrandLogoText';
 
 export const Footer: React.FC = () => {
   return (
@@ -22,36 +23,32 @@ export const Footer: React.FC = () => {
               <img
                 src="/logo-com-fundo.png"
                 alt="FLT Infotech"
-                className="h-14 sm:h-16 md:h-18 w-auto object-contain rounded-lg shrink-0 group-hover:scale-105 transition-transform shadow-md"
+                className="h-13 sm:h-15 md:h-16 w-auto object-contain rounded-lg shrink-0 group-hover:scale-105 transition-transform shadow-md"
               />
-              <div className="flex flex-col justify-center leading-tight">
-                <span className="text-base sm:text-lg md:text-xl font-black text-[#00ff01] tracking-tight leading-none drop-shadow-[0_1px_6px_rgba(0,255,1,0.25)]">
-                  FLT INFOTECH
-                </span>
-                <span className="text-xs sm:text-sm text-slate-100 font-semibold mt-1 leading-tight">
-                  Assistência Técnica em Santos
-                </span>
-              </div>
+              <BrandLogoText className="w-[155px] sm:w-[185px] md:w-[210px] h-auto" glow={false} />
             </a>
 
-            <div className="flex items-center space-x-3 pt-2 text-slate-300">
+            {/* Social Icons with original official brand colors and larger tactile sizing */}
+            <div className="flex items-center space-x-3 pt-3">
               <a
                 href={COMPANY_INFO.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center hover:text-white transition-colors"
-                aria-label="Instagram"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] flex items-center justify-center text-white shadow-md hover:scale-110 hover:shadow-[0_0_16px_rgba(220,39,67,0.5)] transition-all duration-200"
+                aria-label="Instagram da FLT Infotech"
+                title="Siga a FLT Infotech no Instagram"
               >
-                <Instagram className="w-4 h-4" />
+                <Instagram className="w-5 h-5 sm:w-5.5 sm:h-5.5 stroke-[2.2]" />
               </a>
               <a
                 href={COMPANY_INFO.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center hover:text-white transition-colors"
-                aria-label="Facebook"
+                className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#1877F2] flex items-center justify-center text-white shadow-md hover:scale-110 hover:shadow-[0_0_16px_rgba(24,119,242,0.5)] transition-all duration-200"
+                aria-label="Facebook da FLT Infotech"
+                title="Curta a FLT Infotech no Facebook"
               >
-                <Facebook className="w-4 h-4" />
+                <Facebook className="w-5 h-5 sm:w-5.5 sm:h-5.5 fill-white stroke-none" />
               </a>
             </div>
           </div>

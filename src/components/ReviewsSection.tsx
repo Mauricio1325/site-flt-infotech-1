@@ -16,7 +16,7 @@ export const ReviewsSection: React.FC = () => {
             O Que Nossos Clientes Dizem
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-            A satisfação de quem confia no nosso trabalho é nossa maior recompensa. Veja porque somos a escolha de tantos clientes em Santos.
+            A satisfação de quem confia no nosso trabalho é nossa maior recompensa. Veja porque somos a escolha de tantos clientes em Santos e Baixada Santista.
           </p>
         </div>
 

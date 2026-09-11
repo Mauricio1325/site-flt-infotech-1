@@ -39,7 +39,7 @@ export const ServicesSection: React.FC = () => {
             SERVIÇOS
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-3">
-            Soluções da Nossa Assistência Técnica em Informática em Santos
+            Soluções da Nossa Assistência Técnica em Informática em Santos e Baixada Santista
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
             Do seu computador ao PC Gamer, temos a solução técnica completa. Conheça nossos principais serviços e como podemos ajudar você.
