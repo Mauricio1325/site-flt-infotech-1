@@ -12,7 +12,7 @@ import { BrandLogoText } from './BrandLogoText';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#070b09] text-slate-400 text-xs pt-16 pb-12 border-t border-white/10">
+    <footer className="bg-[#070b09] text-slate-400 text-xs pt-16 pb-16 sm:pb-10 border-t border-white/10">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-white/10">
@@ -114,6 +114,21 @@ export const Footer: React.FC = () => {
           <a href="#sobre" className="hover:text-slate-300 transition-colors">
             Política de Privacidade
           </a>
+        </div>
+
+        {/* Rodapé - Assinatura do Desenvolvedor */}
+        <div className="border-t border-white/10 mt-6 py-[15px] text-center text-[12px] text-[#888888]">
+          <p className="m-0 leading-normal">
+            Desenvolvido por Maurício Reis |{' '}
+            <a
+              href="https://wa.me/5513996733810"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#888888] hover:text-slate-200 transition-colors underline-offset-2 hover:underline"
+            >
+              Contato: (13) 99673-3810
+            </a>
+          </p>
         </div>
 
       </div>
