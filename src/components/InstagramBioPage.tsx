@@ -60,7 +60,9 @@ export const InstagramBioPage: React.FC<InstagramBioPageProps> = ({ onBackToMain
             </button>
           ) : (
             <a
-              href="/"
+              href="https://fltinfotech.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-white/80 hover:text-white bg-white/10 hover:bg-white/20 px-3 py-1 rounded-full transition-colors"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
