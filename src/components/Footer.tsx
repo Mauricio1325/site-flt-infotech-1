@@ -75,6 +75,7 @@ export const Footer: React.FC = () => {
               <li><a href="#avaliacoes" className="hover:text-white transition-colors">Avaliações</a></li>
               <li><a href="#localizacao" className="hover:text-white transition-colors">Localização</a></li>
               <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
+              <li><a href="#bio" className="text-[#00ff01] hover:underline font-semibold transition-colors flex items-center gap-1">Bio do Instagram ★</a></li>
             </ul>
           </div>
 
