@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'motion/react';
 import { 
   ShieldCheck, 
   FileText, 
@@ -57,41 +58,18 @@ export const Hero: React.FC = () => {
           </button>
         </div>
 
-        {/* Floating Animation Styles */}
-        <style>{`
-          @keyframes float-hero-card {
-            0%, 100% {
-              transform: translateY(0px);
-            }
-            50% {
-              transform: translateY(-16px);
-            }
-          }
-          @keyframes float-hero-img {
-            0%, 100% {
-              transform: scale(1.05) translateY(0px);
-            }
-            50% {
-              transform: scale(1.05) translateY(-8px);
-            }
-          }
-          .floating-card-anim {
-            animation: float-hero-card 4.5s ease-in-out infinite;
-            will-change: transform;
-          }
-          .floating-img-anim {
-            animation: float-hero-img 3.2s ease-in-out infinite;
-            will-change: transform;
-          }
-          @media (prefers-reduced-motion: reduce) {
-            .floating-card-anim, .floating-img-anim {
-              animation: none !important;
-            }
-          }
-        `}</style>
-
-        {/* Hero Tech Devices Floating Image with Prominent Logo Highlight */}
-        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border border-[#00ff01]/30 shadow-[0_15px_50px_rgba(0,0,0,0.7)] floating-card-anim group">
+        {/* Hero Tech Devices Floating Image with Prominent Logo Highlight - Powered by Motion */}
+        <motion.div
+          animate={{
+            y: [0, -18, 0],
+          }}
+          transition={{
+            duration: 4.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border border-[#00ff01]/40 shadow-[0_15px_50px_rgba(0,0,0,0.7)] group"
+        >
           {/* Prominent Logo Badge positioned at the bottom of the floating devices image */}
           <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-2xl bg-black/85 backdrop-blur-md border border-[#00ff01]/50 shadow-[0_0_30px_rgba(0,255,1,0.35)] transition-transform duration-300 group-hover:scale-[1.02] max-w-[95%]">
             <img
@@ -102,14 +80,23 @@ export const Hero: React.FC = () => {
             <BrandLogoText className="w-[185px] sm:w-[225px] md:w-[255px] h-auto" glow={true} />
           </div>
 
-          <img
+          <motion.img
             src={heroDevicesImage}
             alt="Assistência Técnica em Informática - FLT Infotech Santos"
-            className="w-full h-auto object-cover max-h-[380px] sm:max-h-[460px] floating-img-anim origin-center"
+            animate={{
+              y: [0, -10, 0],
+              scale: [1.04, 1.06, 1.04],
+            }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-full h-auto object-cover max-h-[380px] sm:max-h-[460px]"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0d] via-black/25 to-black/20 pointer-events-none"></div>
-        </div>
+        </motion.div>
       </div>
 
       {/* 3 Floating Highlight Feature Cards (Exact structure from model site) */}
