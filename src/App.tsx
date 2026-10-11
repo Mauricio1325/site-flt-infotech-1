@@ -6,6 +6,7 @@ import { Services } from './components/Services';
 import { WhyChooseUs } from './components/WhyChooseUs';
 import { QuickQuote } from './components/QuickQuote';
 import { Testimonials } from './components/Testimonials';
+import { FaqSection } from './components/FaqSection';
 import { LocationSection } from './components/LocationSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -21,6 +22,7 @@ export const App: React.FC = () => {
         <WhyChooseUs />
         <QuickQuote />
         <Testimonials />
+        <FaqSection />
         <LocationSection />
       </main>
       <Footer />
