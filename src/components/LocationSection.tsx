@@ -1,7 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Clock, Mail, Navigation } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
-import storeImg from '../assets/images/tech_store_front_1788963613468.jpg';
 
 export const LocationSection: React.FC = () => {
   return (
@@ -102,13 +101,13 @@ export const LocationSection: React.FC = () => {
           <div className="flex flex-col gap-6">
             <div className="relative rounded-3xl overflow-hidden border border-white/10 h-64 sm:h-72">
               <img 
-                src={storeImg} 
-                alt="Fachada FLT Infotech Macuco Santos" 
+                src="/conserta-computadores-notebook-impressoras-celular.png" 
+                alt="FLT Infotech - Especialista em Conserto de Computadores, Notebooks, Impressoras e Celulares no Macuco em Santos" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
                 <span className="text-xs font-bold text-white bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/15">
-                  📍 Fachada da Loja no Macuco
+                  📍 Loja & Laboratório Especializado no Macuco
                 </span>
               </div>
             </div>
