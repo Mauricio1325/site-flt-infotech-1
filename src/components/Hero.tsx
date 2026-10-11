@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
 
         {/* Impactful Headline */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.12] mb-6 max-w-5xl mx-auto">
-          Recupere seu <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff01] via-emerald-300 to-[#00ff01]">Notebook, PC Gamer, Celular ou Impressora</span> com Rapidez e Garantia
+          Recupere seu <span className="text-[#00ff01]">Notebook, PC Gamer, Celular ou Impressora</span> com Rapidez e Garantia
         </h1>
 
         {/* Subtitle */}
