@@ -9,15 +9,12 @@ import {
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 import { BrandLogoText } from './BrandLogoText';
-import heroDevicesImage from '../assets/images/hero_tech_devices_1788963590317.jpg';
-
-// Camadas individuais dos equipamentos para animação independente
-import layerNotebooks from '../assets/images/hero_layers/layer_notebooks.webp';
-import layerMotherboard from '../assets/images/hero_layers/layer_motherboard.webp';
-import layerRam from '../assets/images/hero_layers/layer_ram.webp';
-import layerSsd from '../assets/images/hero_layers/layer_ssd.webp';
-import layerMobile from '../assets/images/hero_layers/layer_mobile.webp';
-import layerCpu from '../assets/images/hero_layers/layer_cpu.webp';
+// Clean isolated device assets for independent floating motion
+import deviceLaptop from '../assets/images/clean_devices/device_laptop.webp';
+import deviceMotherboard from '../assets/images/clean_devices/device_motherboard.webp';
+import devicePhone from '../assets/images/clean_devices/device_phone.webp';
+import deviceRam from '../assets/images/clean_devices/device_ram.webp';
+import deviceCpu from '../assets/images/clean_devices/device_cpu.webp';
 
 export const Hero: React.FC = () => {
   const handleWhatsAppQuote = () => {
@@ -66,39 +63,114 @@ export const Hero: React.FC = () => {
           </button>
         </div>
 
-        {/* Hero Tech Devices Showcase - Imagem Limpa Sem Emendas com Flutuação e Logo Fixa */}
-        <div className="relative max-w-5xl xl:max-w-[1080px] mx-auto rounded-3xl overflow-hidden border-2 border-[#00ff01]/40 shadow-[0_25px_70px_rgba(0,0,0,0.85),0_0_45px_rgba(0,255,1,0.2)] bg-[#070b09] min-h-[340px] sm:min-h-[460px] md:min-h-[520px] lg:min-h-[560px] max-h-[580px] flex items-center justify-center group">
-          {/* Fundo com iluminação ambiente sutil */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00ff01]/10 via-[#0a120e]/60 to-[#070b09] pointer-events-none"></div>
+        {/* Hero Tech Devices Showcase - Elementos Isolados com Flutuação Independente e Logo 100% Fixa */}
+        <div className="relative max-w-5xl xl:max-w-[1080px] mx-auto rounded-3xl overflow-hidden border-2 border-[#00ff01]/40 shadow-[0_25px_70px_rgba(0,0,0,0.85),0_0_45px_rgba(0,255,1,0.2)] bg-[#060a08] h-[360px] sm:h-[480px] md:h-[540px] lg:h-[580px] select-none">
+          {/* Fundo com iluminação ambiente e sutil grade cibernética */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(0,255,1,0.12)_0%,_rgba(10,18,14,0.65)_50%,_#060a08_100%)] pointer-events-none"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#00ff0108_1px,transparent_1px),linear-gradient(to_bottom,#00ff0108_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black_45%,transparent_80%)] pointer-events-none opacity-50"></div>
 
-          {/* Imagem Original Sem Emendas com Flutuação Suave Contínua */}
+          {/* Luz de destaque no topo */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-28 bg-[#00ff01]/10 blur-3xl pointer-events-none rounded-full"></div>
+
+          {/* 1. Placa-mãe Gamer (Fundo Superior Direito) */}
           <motion.img
-            src={heroDevicesImage}
-            alt="Assistência Técnica Especializada em Santos - FLT Infotech"
+            src={deviceMotherboard}
+            alt="Placa-Mãe e Hardware Especializado FLT Infotech"
             animate={{
-              y: [0, -14, 0],
-              scale: [1.03, 1.05, 1.03],
+              y: [0, -15, 0],
+              rotate: [0, 1.2, 0],
             }}
             transition={{
-              duration: 4.2,
+              duration: 5.2,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-full h-auto object-cover min-h-[340px] sm:min-h-[460px] md:min-h-[520px] lg:min-h-[560px] max-h-[580px] pointer-events-none select-none"
+            className="absolute top-[5%] sm:top-[6%] right-[3%] sm:right-[6%] md:right-[8%] w-[38%] sm:w-[36%] md:w-[35%] max-w-[380px] object-contain drop-shadow-[0_14px_30px_rgba(0,0,0,0.85)] z-10 pointer-events-none"
+            loading="eager"
+          />
+
+          {/* 2. Notebook de Alta Performance (Destaque Principal Esquerdo) */}
+          <motion.img
+            src={deviceLaptop}
+            alt="Reparo de Notebooks e MacBooks FLT Infotech"
+            animate={{
+              y: [0, -18, 0],
+              rotate: [0, -1, 0],
+            }}
+            transition={{
+              duration: 4.6,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="absolute top-[10%] sm:top-[11%] left-[3%] sm:left-[6%] md:left-[8%] w-[48%] sm:w-[46%] md:w-[44%] max-w-[450px] object-contain drop-shadow-[0_18px_38px_rgba(0,0,0,0.9)] z-20 pointer-events-none"
+            loading="eager"
+          />
+
+          {/* 3. Pente de Memória RAM (Lateral Direita Média) */}
+          <motion.img
+            src={deviceRam}
+            alt="Upgrades de Memória RAM FLT Infotech"
+            animate={{
+              y: [0, -16, 0],
+              rotate: [0, -2, 0],
+            }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.8,
+            }}
+            className="absolute top-[34%] sm:top-[35%] right-[2%] sm:right-[4%] md:right-[5%] w-[16%] sm:w-[15%] md:w-[14%] max-w-[145px] object-contain drop-shadow-[0_12px_22px_rgba(0,0,0,0.8)] z-15 pointer-events-none"
+            loading="eager"
+          />
+
+          {/* 4. Celular / Smartphone Moderno (Inferior Centro-Esquerda) */}
+          <motion.img
+            src={devicePhone}
+            alt="Conserto de Celulares e Smartphones FLT Infotech"
+            animate={{
+              y: [0, -13, 0],
+              rotate: [0, 1.8, 0],
+            }}
+            transition={{
+              duration: 4.0,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.4,
+            }}
+            className="absolute bottom-[16%] sm:bottom-[15%] left-[26%] sm:left-[30%] md:left-[33%] w-[22%] sm:w-[20%] md:w-[19%] max-w-[195px] object-contain drop-shadow-[0_14px_28px_rgba(0,0,0,0.95)] z-25 pointer-events-none"
+            loading="eager"
+          />
+
+          {/* 5. Processador CPU (Inferior Centro-Direita) */}
+          <motion.img
+            src={deviceCpu}
+            alt="Processadores e Peças FLT Infotech"
+            animate={{
+              y: [0, -11, 0],
+              rotate: [0, 2, 0],
+            }}
+            transition={{
+              duration: 3.8,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1.2,
+            }}
+            className="absolute bottom-[17%] sm:bottom-[16%] right-[16%] sm:right-[18%] md:right-[20%] w-[16%] sm:w-[15%] md:w-[14%] max-w-[140px] object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.85)] z-22 pointer-events-none"
             loading="eager"
           />
 
           {/* Gradiente sutil de acabamento na base */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0d] via-black/15 to-transparent pointer-events-none z-15"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#060a08] via-transparent to-transparent pointer-events-none z-28"></div>
 
           {/* Prominent Logo Badge - 100% FIXO no pé do card */}
-          <div className="absolute bottom-4 sm:bottom-7 md:bottom-8 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3 sm:gap-4 px-5 sm:px-7 py-3 sm:py-4 rounded-2xl bg-black/90 backdrop-blur-md border border-[#00ff01]/50 shadow-[0_0_35px_rgba(0,255,1,0.4)] transition-transform duration-300 hover:scale-[1.02] max-w-[95%]">
+          <div className="absolute bottom-3 sm:bottom-6 md:bottom-7 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2.5 sm:gap-4 px-4 sm:px-7 py-2.5 sm:py-3.5 rounded-2xl bg-black/92 backdrop-blur-md border border-[#00ff01]/50 shadow-[0_0_35px_rgba(0,255,1,0.4)] transition-transform duration-300 hover:scale-[1.02] max-w-[95%]">
             <img
               src="/logo-com-fundo.png"
               alt="FLT Infotech"
-              className="h-11 sm:h-14 md:h-16 w-auto object-contain rounded-lg shadow-md shrink-0"
+              className="h-10 sm:h-13 md:h-15 w-auto object-contain rounded-lg shadow-md shrink-0"
             />
-            <BrandLogoText className="w-[195px] sm:w-[240px] md:w-[280px] h-auto" glow={true} />
+            <BrandLogoText className="w-[180px] sm:w-[230px] md:w-[270px] h-auto" glow={true} />
           </div>
         </div>
       </div>
