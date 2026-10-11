@@ -57,8 +57,41 @@ export const Hero: React.FC = () => {
           </button>
         </div>
 
+        {/* Floating Animation Styles */}
+        <style>{`
+          @keyframes float-hero-card {
+            0%, 100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-16px);
+            }
+          }
+          @keyframes float-hero-img {
+            0%, 100% {
+              transform: scale(1.05) translateY(0px);
+            }
+            50% {
+              transform: scale(1.05) translateY(-8px);
+            }
+          }
+          .floating-card-anim {
+            animation: float-hero-card 4.5s ease-in-out infinite;
+            will-change: transform;
+          }
+          .floating-img-anim {
+            animation: float-hero-img 3.2s ease-in-out infinite;
+            will-change: transform;
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .floating-card-anim, .floating-img-anim {
+              animation: none !important;
+            }
+          }
+        `}</style>
+
         {/* Hero Tech Devices Floating Image with Prominent Logo Highlight */}
-        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border border-white/15 glow-card-float group">
+        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border border-[#00ff01]/30 shadow-[0_15px_50px_rgba(0,0,0,0.7)] floating-card-anim group">
           {/* Prominent Logo Badge positioned at the bottom of the floating devices image */}
           <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-2xl bg-black/85 backdrop-blur-md border border-[#00ff01]/50 shadow-[0_0_30px_rgba(0,255,1,0.35)] transition-transform duration-300 group-hover:scale-[1.02] max-w-[95%]">
             <img
@@ -72,7 +105,7 @@ export const Hero: React.FC = () => {
           <img
             src={heroDevicesImage}
             alt="Assistência Técnica em Informática - FLT Infotech Santos"
-            className="w-full h-auto object-cover max-h-[380px] sm:max-h-[460px] animate-floating-devices origin-center"
+            className="w-full h-auto object-cover max-h-[380px] sm:max-h-[460px] floating-img-anim origin-center"
             loading="eager"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0d] via-black/25 to-black/20 pointer-events-none"></div>
