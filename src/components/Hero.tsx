@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
       {/* Background Subtle Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f0d] via-[#101713] to-[#0a0f0d] pointer-events-none"></div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Company Header Tag */}
         <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-5 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-[#00ff01] animate-pulse"></span>
@@ -68,16 +68,16 @@ export const Hero: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border border-[#00ff01]/40 shadow-[0_15px_50px_rgba(0,0,0,0.7)] group"
+          className="relative max-w-5xl xl:max-w-[1080px] mx-auto rounded-3xl overflow-hidden border-2 border-[#00ff01]/40 shadow-[0_25px_70px_rgba(0,0,0,0.85),0_0_45px_rgba(0,255,1,0.2)] group"
         >
           {/* Prominent Logo Badge positioned at the bottom of the floating devices image */}
-          <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-2.5 sm:py-3.5 rounded-2xl bg-black/85 backdrop-blur-md border border-[#00ff01]/50 shadow-[0_0_30px_rgba(0,255,1,0.35)] transition-transform duration-300 group-hover:scale-[1.02] max-w-[95%]">
+          <div className="absolute bottom-4 sm:bottom-7 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 sm:gap-4 px-5 sm:px-7 py-3 sm:py-4 rounded-2xl bg-black/85 backdrop-blur-md border border-[#00ff01]/50 shadow-[0_0_35px_rgba(0,255,1,0.4)] transition-transform duration-300 group-hover:scale-[1.02] max-w-[95%]">
             <img
               src="/logo-com-fundo.png"
               alt="FLT Infotech"
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain rounded-lg shadow-md shrink-0"
+              className="h-11 sm:h-14 md:h-16 w-auto object-contain rounded-lg shadow-md shrink-0"
             />
-            <BrandLogoText className="w-[185px] sm:w-[225px] md:w-[255px] h-auto" glow={true} />
+            <BrandLogoText className="w-[195px] sm:w-[240px] md:w-[280px] h-auto" glow={true} />
           </div>
 
           <motion.img
@@ -85,17 +85,17 @@ export const Hero: React.FC = () => {
             alt="Assistência Técnica em Informática - FLT Infotech Santos"
             animate={{
               y: [0, -10, 0],
-              scale: [1.04, 1.06, 1.04],
+              scale: [1.03, 1.05, 1.03],
             }}
             transition={{
               duration: 3.5,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-full h-auto object-cover max-h-[380px] sm:max-h-[460px]"
+            className="w-full h-auto object-cover min-h-[340px] sm:min-h-[460px] md:min-h-[520px] lg:min-h-[560px] max-h-[580px]"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0d] via-black/25 to-black/20 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f0d] via-black/20 to-black/15 pointer-events-none"></div>
         </motion.div>
       </div>
 
