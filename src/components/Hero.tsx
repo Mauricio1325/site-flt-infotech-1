@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 import { BrandLogoText } from './BrandLogoText';
+import heroDevicesImage from '../assets/images/hero_tech_devices_1788963590317.jpg';
 
 // Camadas individuais dos equipamentos para animação independente
 import layerNotebooks from '../assets/images/hero_layers/layer_notebooks.webp';
@@ -65,112 +66,25 @@ export const Hero: React.FC = () => {
           </button>
         </div>
 
-        {/* Hero Tech Devices Showcase with INDEPENDENT Floating Layers & FIXED Logo */}
-        <div className="relative max-w-5xl xl:max-w-[1080px] mx-auto rounded-3xl overflow-hidden border-2 border-[#00ff01]/40 shadow-[0_25px_70px_rgba(0,0,0,0.85),0_0_45px_rgba(0,255,1,0.2)] bg-[#070b09] aspect-[1376/768] min-h-[340px] sm:min-h-[460px] md:min-h-[520px] lg:min-h-[560px] max-h-[580px] flex items-center justify-center group">
+        {/* Hero Tech Devices Showcase - Imagem Limpa Sem Emendas com Flutuação e Logo Fixa */}
+        <div className="relative max-w-5xl xl:max-w-[1080px] mx-auto rounded-3xl overflow-hidden border-2 border-[#00ff01]/40 shadow-[0_25px_70px_rgba(0,0,0,0.85),0_0_45px_rgba(0,255,1,0.2)] bg-[#070b09] min-h-[340px] sm:min-h-[460px] md:min-h-[520px] lg:min-h-[560px] max-h-[580px] flex items-center justify-center group">
           {/* Fundo com iluminação ambiente sutil */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00ff01]/10 via-[#0a120e]/60 to-[#070b09] pointer-events-none"></div>
 
-          {/* 1. Camada Notebooks (MacBook & Dell) - Flutuação elegante */}
+          {/* Imagem Original Sem Emendas com Flutuação Suave Contínua */}
           <motion.img
-            src={layerNotebooks}
-            alt="Assistência Técnica de Notebooks e MacBooks - FLT Infotech"
+            src={heroDevicesImage}
+            alt="Assistência Técnica Especializada em Santos - FLT Infotech"
             animate={{
-              y: [0, -12, 0],
-            }}
-            transition={{
-              duration: 4.8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-10"
-            loading="eager"
-          />
-
-          {/* 2. Camada Placa-Mãe Gamer - Flutuação com leve respiração */}
-          <motion.img
-            src={layerMotherboard}
-            alt="Reparo de Placa-mãe e Hardware - FLT Infotech"
-            animate={{
-              y: [0, -16, 0],
-              rotate: [0, 0.4, 0],
-            }}
-            transition={{
-              duration: 3.8,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.3,
-            }}
-            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-10"
-            loading="eager"
-          />
-
-          {/* 3. Camada Memória RAM RGB - Flutuação mais ágil e dinâmica */}
-          <motion.img
-            src={layerRam}
-            alt="Upgrade de Memória RAM - FLT Infotech"
-            animate={{
-              y: [0, -18, 0],
-              rotate: [0, -0.6, 0],
-            }}
-            transition={{
-              duration: 3.1,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.6,
-            }}
-            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-10"
-            loading="eager"
-          />
-
-          {/* 4. Camada SSD NVMe M.2 - Flutuação central */}
-          <motion.img
-            src={layerSsd}
-            alt="Upgrade de SSD NVMe - FLT Infotech"
-            animate={{
-              y: [0, -13, 0],
-            }}
-            transition={{
-              duration: 3.4,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.2,
-            }}
-            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-10"
-            loading="eager"
-          />
-
-          {/* 5. Camada Celular e Tablet - Flutuação na base */}
-          <motion.img
-            src={layerMobile}
-            alt="Conserto de Celulares e Tablets - FLT Infotech"
-            animate={{
-              y: [0, -9, 0],
+              y: [0, -14, 0],
+              scale: [1.03, 1.05, 1.03],
             }}
             transition={{
               duration: 4.2,
               repeat: Infinity,
               ease: "easeInOut",
-              delay: 0.5,
             }}
-            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-10"
-            loading="eager"
-          />
-
-          {/* 6. Camada Processador CPU - Flutuação no canto inferior direito */}
-          <motion.img
-            src={layerCpu}
-            alt="Manutenção de Processadores e PC Gamer - FLT Infotech"
-            animate={{
-              y: [0, -15, 0],
-              rotate: [0, 0.7, 0],
-            }}
-            transition={{
-              duration: 3.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 0.8,
-            }}
-            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none z-10"
+            className="w-full h-auto object-cover min-h-[340px] sm:min-h-[460px] md:min-h-[520px] lg:min-h-[560px] max-h-[580px] pointer-events-none select-none"
             loading="eager"
           />
 
