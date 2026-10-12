@@ -89,9 +89,15 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
-          <div>
-            © {new Date().getFullYear()} {COMPANY_INFO.name} - Assistência Técnica em Informática em Santos. Todos os direitos reservados.
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 text-center sm:text-left">
+            <span>
+              © {new Date().getFullYear()} {COMPANY_INFO.name} - Assistência Técnica em Informática em Santos. Todos os direitos reservados.
+            </span>
+            <span className="hidden sm:inline text-slate-700">•</span>
+            <span>
+              Desenvolvido por <strong className="text-slate-300 font-semibold">Maurício Reis</strong> | Contato: <a href="https://wa.me/5513996733810?text=Ol%C3%A1%20Maur%C3%ADcio!%20Vi%20o%20site%20da%20FLT%20Infotech%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20site." target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-[#00ff01] hover:underline font-medium transition-colors">(13) 99673-3810</a>
+            </span>
           </div>
 
           <button
